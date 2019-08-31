@@ -1,0 +1,9 @@
+<script>
+    setInterval(() => {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/resources');
+        xhr.responseType = 'text';
+        xhr.onload = () => console.log(xhr.response);
+        xhr.send();
+    }, 2000);
+</script>

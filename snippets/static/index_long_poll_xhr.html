@@ -1,0 +1,11 @@
+<script>
+    function checkUpdates(url) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.onload = function() {
+            checkUpdates('/resources')
+        }
+        xhr.send();
+    }
+    checkUpdates('/resources');
+</script>
